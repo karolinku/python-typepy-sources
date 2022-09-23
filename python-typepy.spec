@@ -2,8 +2,8 @@
 
 Name:           python-%{pypi_name}
 Version:        1.2.0
-Release:        1%{?dist}
-Summary:        python library for variable type checker/validator/converter at a run time.
+Release:        2%{?dist}
+Summary:        Python library for variable type checker/validator/converter at a run time
 
 License:        MIT
 URL:            https://github.com/thombashi/typepy 
@@ -18,7 +18,7 @@ BuildRequires:  python3-tcolorpy
 BuildRequires:  python3-pytz
 BuildRequires:  python3-dateutil
 %description
-python library for variable type checker/validator/converter at a run time.
+Python library for variable type checker/validator/converter at a run time.
 
 %package -n     python3-%{pypi_name}
 Summary:        %{summary}
@@ -26,6 +26,7 @@ Summary:        %{summary}
 Requires:  python3-mbstrdecoder >= 1.0.0
 
 %description -n python3-%{pypi_name}
+Python library for variable type checker/validator/converter at a run time.
 
 %prep
 %autosetup -p1 -n %{pypi_name}-%{version}
@@ -48,7 +49,8 @@ Requires:  python3-mbstrdecoder >= 1.0.0
 %doc README.rst
 
 %changelog
-
+* Fri Sep 23 2022 Karolina Kula <kkula@redhat.com> - 1.2.0-2
+- fix rpmlint issues
 * Thu Sep 08 2022 Karolina Kula <kkula@redhat.com> - 1.2.0-1
 - initial package build
 
