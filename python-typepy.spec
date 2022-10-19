@@ -1,13 +1,13 @@
 %global pypi_name typepy
 
 Name:           python-%{pypi_name}
-Version:        1.2.0
-Release:        2%{?dist}
+Version:        1.3.0
+Release:        1%{?dist}
 Summary:        Python library for variable type checker/validator/converter at a run time
 
 License:        MIT
 URL:            https://github.com/thombashi/typepy 
-Source0:        https://files.pythonhosted.org/packages/source/t/%{pypi_name}/%{pypi_name}-%{version}.tar.gz 
+Source0:        %{pypi_source %{pypi_name}}
 BuildArch:      noarch
 
 BuildRequires:  python3-devel
@@ -49,6 +49,9 @@ Python library for variable type checker/validator/converter at a run time.
 %doc README.rst
 
 %changelog
+* Fri Oct 13 2022 Karolina Kula <kkula@redhat.com> - 1.3.0-1
+- Update to 1.3.0
+- change source
 * Fri Sep 23 2022 Karolina Kula <kkula@redhat.com> - 1.2.0-2
 - fix rpmlint issues
 * Thu Sep 08 2022 Karolina Kula <kkula@redhat.com> - 1.2.0-1
